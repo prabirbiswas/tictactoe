@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+//import android.widget.GridLayout;
 import androidx.gridlayout.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,14 +30,14 @@ public class MainActivity extends AppCompatActivity {
         gameState[tappedCounter]=activePlayer;
 
         counter.setTranslationY(-1500);
-        counter.setImageResource(R.drawable.yellow);
+        counter.setImageResource(R.drawable.o);
 
         if(activePlayer==0){
-            counter.setImageResource(R.drawable.yellow);
+            counter.setImageResource(R.drawable.o);
             activePlayer=1;
         }
         else {
-            counter.setImageResource(R.drawable.red);
+            counter.setImageResource(R.drawable.x);
             activePlayer=0;
         }
         counter.animate().translationYBy(1500).rotation(3600).setDuration(300);
@@ -46,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
                 String winner = "";
 
                 if (activePlayer == 1) {
-                    winner = "Yellow";
+                    winner = "O";
                 } else {
-                    winner = "Red";
+                    winner = "X";
                 }
 
 
